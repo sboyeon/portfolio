@@ -2,7 +2,7 @@
   <div class="project_modal" v-if="modal1 == true">
     <div class="project_close" @click="modal1 = false"></div>
   </div>
-  <div class="project_wrap1">
+  <div class="project_wrap1 scroll" id="project">
     <h1 class="projectTxt">Project</h1>
     <div class="project_bot_wrap">
       <div class="project_txt_wrap">

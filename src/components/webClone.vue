@@ -1,5 +1,5 @@
 <template>
-  <div class="webClone_wrap1">
+  <div class="webClone_wrap1 scroll">
     <h1 class="webCloneTxt">Web clone</h1>
     <div class="webClone_bot_wrap">
       <div class="webClone_txt_wrap">

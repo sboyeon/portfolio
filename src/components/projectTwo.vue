@@ -1,5 +1,5 @@
 <template>
-  <div class="project_wrap2">
+  <div class="project_wrap2 scroll">
     <h1 class="projectTxt2">Project</h1>
     <div class="project_bot_wrap2">
       <div class="project_txt_wrap2">

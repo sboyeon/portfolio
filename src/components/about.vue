@@ -1,5 +1,5 @@
 <template>
-  <div class="about_wrap">
+  <div class="about_wrap scroll">
     <h1 class="aboutTxt">About</h1>
     <div class="about_bottom_wrap">
       <div class="about_left_wrap">

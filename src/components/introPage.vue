@@ -38,7 +38,8 @@ export default {
 }
 
 .introPage_wrap{
-  height: 650px;
+  /* height: 650px; */
+  height: 100vh;
   background-color: rgba(255, 230, 207, 30%);
   padding: 50px 20px;
 }

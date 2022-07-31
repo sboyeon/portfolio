@@ -1,8 +1,8 @@
 <template>
-<article class="mainNav">
+<article class="mainNav" id="top">
   <div>
     <a href="introPage.vue">
-      <img class="mainLogo sm_none" src="../src/assets/img/peachLogo.png">
+      <img class="mainLogo sm_none scroll" src="../src/assets/img/peachLogo.png">
     </a>
   </div>
   <nav>
@@ -17,16 +17,24 @@
 </article>
 <introPage id="intro"></introPage>
 <about id="about"></about>
-<project id="project"></project>
+<project></project>
 <proTwo id="proTwo"></proTwo>
 <webclone id="webclone"></webclone>
 <webTwo id="webTwo"></webTwo>
 <webThird id="webThird"></webThird>
 <contactMe id="contact"></contactMe>
 <p class="fotCopy">Copyright 2022. Web Publisher portfolio -- by Seong Boyeon</p>
-<div class="moveTopBtn" id="container">
+<div class="moveTopBtn" id="container" @click="gototop">
   <span>TOP</span>
 </div>
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="#">About</a>
+  <a href="#">Services</a>
+  <a href="#">Clients</a>
+  <a href="#">Contact</a>
+</div>
+<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 </template>
 
 <script>
@@ -38,13 +46,11 @@ import webclone from './components/webClone.vue'
 import webTwo from './components/webCloneTwo.vue'
 import webThird from './components/webCloneThr.vue'
 import contactMe from './components/contactMe.vue'
-import test from '../public/js/test.js'
+
 
 export default {
   name: 'App',
-  setup() {
-    test.method('hello!')
-  },
+
   methods: {
      gotointro() {
       const intro = document.getElementById('intro')
@@ -90,6 +96,12 @@ export default {
     },
     gotocontact() {
       const contact = document.getElementById('contact')
+      if(contact) {
+        contact.scrollIntoView({behavior : 'smooth'})
+      }
+    },
+    gototop() {
+      const contact = document.getElementById('top')
       if(contact) {
         contact.scrollIntoView({behavior : 'smooth'})
       }
@@ -189,10 +201,10 @@ export default {
 
 .moveTopBtn>span{
     display: block;
-    font-family: "sub_type";
+    font-family: Dutch801 Rm BT;
     font-size: 18px;
     font-weight: bold;
-    color: #F26A25;
+    color: #EB2039;
     letter-spacing: 1px;
 }
 

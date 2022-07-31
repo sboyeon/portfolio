@@ -1,5 +1,5 @@
 <template>
-  <div class="contact_wrap">
+  <div class="contact_wrap scroll">
     <h1 class="contactTxt">Contact</h1>
     <div class="contact_bottom_wrap">
       <div class="contact_bot_l">
