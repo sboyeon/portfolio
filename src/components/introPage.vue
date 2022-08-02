@@ -1,5 +1,5 @@
 <template>
-  <div class="introPage_wrap">
+  <div class="introPage_wrap sroll">
     <div class="intro">
       <h1 class="introMainTxt">Portfolio</h1>
       <div class="introImgs">
@@ -38,7 +38,7 @@ export default {
 }
 
 .introPage_wrap{
-  height: 650px;
+  height: 100vh;
   background-color: rgba(255, 230, 207, 30%);
   padding: 50px 20px;
 }
@@ -79,7 +79,7 @@ export default {
 
 .introImgs>img:nth-child(3){
   position: absolute;
-  bottom: 8%; right: 13%;
+  bottom: 40%; right: 13%;
   z-index: 1;
 }
 
@@ -105,6 +105,8 @@ export default {
 
 }
 
+
+
 @media screen and (max-width : 1280px) {
 
   
@@ -119,7 +121,7 @@ export default {
 
   .introImgs>img:nth-child(3) {
     width: 350px;
-    right: 2%; bottom: 7%;
+    right: 2%; bottom: 37%;
   }
 
   .moveTxt{
@@ -139,7 +141,7 @@ export default {
 
   .introImgs>img:nth-child(3) {
     width: 330px;
-    right: 0%; bottom: 5%;
+    right: 0%; bottom: 38%;
   }
 
 
@@ -159,8 +161,8 @@ export default {
   }
 
   .introImgs>img:nth-child(3) {
-    width: 330px;
-    right: 0%; bottom: 16%;
+    width: 320px;
+    right: -1%; bottom: 44%;
   }
 
   .moveTxt{
@@ -174,17 +176,18 @@ export default {
 @media screen and (max-width : 480px) {
 
 .introImgs>img:nth-child(1) {
-    width: 218px;
+    width: 190px;
+    top: 30px;
   }
 
   .introImgs>img:nth-child(2) {
-    width: 290px;
+    width: 240px;
     left: 1%; top: 3%;
   }
 
   .introImgs>img:nth-child(3) {
-    width: 300px;
-    right: 0%; bottom: 20%;
+    width: 236px;
+    right: -2%; bottom: 55%;
   }
 
   .moveTxt{
@@ -195,23 +198,24 @@ export default {
 
 @media screen and (max-width : 376px) {
 
+
   .introPage_wrap{
-    padding: 30px 10px;
+    padding-top: 80%;
   }
 
    .introImgs>img:nth-child(1) {
-    width: 130px;
+    width: 100px;
     top: 3%;
   }
 
   .introImgs>img:nth-child(2) {
-    width: 150px;
+    width: 130px;
     left: 10%;
   }
 
   .introImgs>img:nth-child(3) {
-    width: 150px;
-    right: 9%; bottom: 52%;
+    width: 130px;
+    right: 5%; bottom: 74%;
   }
 
 }

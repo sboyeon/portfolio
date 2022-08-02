@@ -2,7 +2,7 @@
   <div class="project_modal" v-if="modal1 == true">
     <div class="project_close" @click="modal1 = false"></div>
   </div>
-  <div class="project_wrap1">
+  <div class="project_wrap1 scroll" id="project">
     <h1 class="projectTxt">Project</h1>
     <div class="project_bot_wrap">
       <div class="project_txt_wrap">
@@ -27,7 +27,7 @@
         </ul>
         <ul class="project_login">
           <li>로그인 페이지</li>
-          <li>공란 존재 시 “다시 확인해주세요.”란 alert 경고문 띄움</li>
+          <li>공란 존재 시 '다시 확인해주세요.' 경고문 띄움</li>
         </ul>
         <div class="project_link">
           <p @click="modal1 = true">Mockup<img class="project_arrow1" src="../assets/img/64818.png" alt="link"></p>
@@ -46,7 +46,7 @@ export default {
   name: 'project-page',
   data() {
     return {
-      modal1: false,
+      modal1: false
   }
 } 
 }
@@ -63,6 +63,7 @@ export default {
 .project_wrap1{
   background-color: rgba(255, 230, 207, 30%);
   height: 100vh;
+  position: relative;
 }
 
 .projectTxt{
@@ -146,7 +147,7 @@ export default {
   width: 30px;
   transform:rotate(-60deg);
   position: absolute;
-  top: 50%; left: 12%;
+  top: 50%; left: 14%;
 }
 
 .project_arrow2{
@@ -161,17 +162,21 @@ export default {
 }
 
 .project_modal {
-  width: 100%;
-  height: 600px;
-  background-color: aquamarine;
-  position: relative;
+  width: 100%; height: 100%;
+  position: absolute;
+  top: 230vh; right: 0px;
+  background: url(../assets/img/touslesjoursMockup.jpg) no-repeat;
+  background-size: 100%;
+  z-index: 99;
+  image-rendering: -webkit-optimize-contrast;
 }
 
 .project_close {
   width: 40px; height: 40px;
-  background-color: blue;
   position: absolute;
-  top: 0px; right: 0px;
+  top: 0px; right: 30px;
+  background: url(../assets/img/close.png) center center no-repeat;
+  background-size: 100%;
 }
 
 
@@ -184,11 +189,11 @@ export default {
   }
 
   .project_arrow1{
-    left: 17%;
+    left: 20%;
   }
 
   .project_arrow2{
-    left: 64%;
+    left: 69%;
   }
 
   .progectImg>img{
@@ -227,16 +232,16 @@ export default {
     font-size: 14px;
   }
 
-  .project_link>a>p{
+  .project_link>p{
     font-size: 15px;
   }
 
   .project_arrow1{
-    left: 20%;
+    left: 22%;
   }
 
   .project_arrow2{
-    left: 72%;
+    left: 75%;
   }
 
   .progectImg>img{
@@ -291,14 +296,18 @@ export default {
     margin: 5px;
   }
 
-  .project_link>a>p{
+  .project_link>p{
     margin: 10px 25px;
   }
 
-  .project_arrow2{
-    left: 44%;
+  .project_arrow1{
+    left: 15%;
   }
 
+  .project_arrow2{
+    left: 51%;
+  }
+  
   .progectImg>img{
     width: 440px;
     margin: 30px 0;
@@ -307,17 +316,6 @@ export default {
 }
 
 
-@media screen and (max-width : 780px) {
-
-  .project_arrow1{
-    left: 12%;
-  }
-
-  .project_arrow2{
-    left: 60%;
-  }
-
-}
 
 @media screen and (max-width : 690px) {
 
@@ -331,7 +329,7 @@ export default {
   }
 
   .project_arrow2{
-    left: 46%;
+    left: 51%;
   }
 
   .progectImg>img{
@@ -350,6 +348,18 @@ export default {
 
   .project_menu>li, .project_login>li{
     font-size: 14px;
+  }
+
+  .project_arrow1{
+    left: 16%;
+  }
+
+  .project_arrow2{
+    left: 55%;
+  }
+
+  .progectImg>img{
+    width: 400px;
   }
 
 }
@@ -389,17 +399,17 @@ export default {
     box-sizing: border-box;
   }
 
-  .project_link>a>p{
+  .project_link>p{
     margin: 5px 15px;
     font-size: 14px;
   }
 
   .project_arrow1{
-    left: 15%;
+    left: 24%;
   }
 
   .project_arrow2{
-    left: 52%;
+    left: 74%;
   }
 
   .progectImg>img{
@@ -415,17 +425,16 @@ export default {
     font-size: 11px;
   }
 
-  .project_link>a>p{
-    padding: 15px;
-    margin: 0px 10px;
+  .project_link>p{
+    margin: 8px 21px;
   }
 
   .project_arrow1{
-    left: 18%;
+    left: 23%;
   }
 
   .project_arrow2{
-    left: 76%;
+    left: 74%;
   }
 
   .progectImg>img{

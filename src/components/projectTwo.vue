@@ -1,5 +1,5 @@
 <template>
-  <div class="project_wrap2">
+  <div class="project_wrap2 scroll">
     <h1 class="projectTxt2">Project</h1>
     <div class="project_bot_wrap2">
       <div class="project_txt_wrap2">
@@ -34,10 +34,8 @@
           <li>셀러의 경우 필수 입력 문항 생성</li>
         </ul>
         <div class="project_link2">
-          <a href="">
             <p>Mockup<img class="project_arrow1" src="../assets/img/64818.png" alt="link"></p>
             <p>사이트바로가기<img class="project_arrow2" src="../assets/img/64818.png" alt="link"></p>
-          </a>
         </div>
       </div>
       <div class="progectImg2">
@@ -136,15 +134,10 @@ export default {
 .project_link2{
   display: flex;
   position: relative;
-}
-
-.project_link2>a{
-  display: flex;
-  text-decoration: none;
   color: #424242;
 }
 
-.project_link2>a>p{
+.project_link2>p{
   margin: 16px 30px;
 }
 
@@ -152,14 +145,14 @@ export default {
   width: 30px;
   transform:rotate(-60deg);
   position: absolute;
-  top: 50%; left: 20%;
+  top: 50%; left: 21%;
 }
 
 .project_arrow2{
   width: 30px;
   transform:rotate(-65deg);
   position: absolute;
-  top: 45%; left: 73%;
+  top: 50%; left: 73%;
 }
 
 .progectImg2>img{
@@ -177,12 +170,8 @@ export default {
     box-sizing: border-box;
   }
 
-  .project_arrow1{
-    left: 17%;
-  }
-
   .project_arrow2{
-    left: 64%;
+    left: 73%;
   }
 
   .progectImg2>img{
@@ -221,12 +210,12 @@ export default {
     font-size: 14px;
   }
 
-  .project_link2>a>p{
+  .project_link2>p{
     font-size: 15px;
   }
 
   .project_arrow1{
-    left: 20%;
+    left: 21%;
   }
 
   .project_arrow2{
@@ -285,12 +274,16 @@ export default {
     margin: 5px;
   }
 
-  .project_link2>a>p{
+  .project_link2>p{
     margin: 10px 25px;
   }
 
+  .project_arrow1{
+    left: 19%;
+  }
+
   .project_arrow2{
-    left: 44%;
+    left: 64%;
   }
 
   .progectImg2>img{
@@ -300,18 +293,6 @@ export default {
 
 }
 
-
-@media screen and (max-width : 780px) {
-
-  .project_arrow1{
-    left: 17%;
-  }
-
-  .project_arrow2{
-    left: 60%;
-  }
-
-}
 
 @media screen and (max-width : 690px) {
 
@@ -324,8 +305,8 @@ export default {
     font-size: 14px;
   }
 
-  .project_arrow2{
-    left: 62%;
+   .project_arrow2{
+    left: 63%;
   }
 
   .progectImg2>img{
@@ -344,6 +325,14 @@ export default {
 
   .project_menu2>li, .project_login2>li{
     font-size: 14px;
+  }
+
+  .project_arrow1{
+    left: 19%;
+  }
+
+  .project_arrow2{
+    left: 64%;
   }
 
 }
@@ -378,15 +367,24 @@ export default {
     font-size: 12px;
   }
 
-  .project_link2>a>p{
+  /* .project_link2{
+    padding: 0px 0px 0px 10px;
+    box-sizing: border-box;
+  } */
+
+  .project_link2>p{
     margin: 5px 15px;
     font-size: 14px;
   }
 
-  .project_arrow2{
-    left: 62%;
+  .project_arrow1{
+    left: 17%;
   }
 
+  .project_arrow2{
+    left: 65%;
+  }
+  
   .progectImg2>img{
     width: 290px;
   }
@@ -400,17 +398,17 @@ export default {
     font-size: 11px;
   }
 
-  .project_link2>a>p{
+  .project_link2>p{
     padding: 15px;
     margin: 0px 10px;
   }
 
-  .project_arrow1{
-    left: 18%;
+   .project_arrow1{
+    left: 22%;
   }
 
   .project_arrow2{
-    left: 76%;
+    left: 79%;
   }
 
   .progectImg2>img{

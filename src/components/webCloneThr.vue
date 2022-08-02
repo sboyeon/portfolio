@@ -1,5 +1,5 @@
 <template>
-  <div class="webClone_wrap3">
+  <div class="webClone_wrap3 scroll">
     <h1 class="webCloneTxt3">Web clone</h1>
     <div class="webClone_bot_wrap3">
       <div class="webClone_txt_wrap3">
@@ -21,8 +21,7 @@
         </pre>
         <div class="webClone_link3">
           <a href="">
-            <p>Mokup<img class="webClone_arrow1" src="../assets/img/64818.png" alt="link"></p>
-            <p>사이트바로가기<img class="webClone_arrow2" src="../assets/img/64818.png" alt="link"></p>
+            <p>사이트바로가기<img class="webClone_arrow1" src="../assets/img/64818.png" alt="link"></p>
           </a>
         </div>
       </div>
@@ -130,16 +129,9 @@ export default {
 
 .webClone_arrow1{
   width: 30px;
-  transform:rotate(-60deg);
-  position: absolute;
-  top: 45%; left: 10%;
-}
-
-.webClone_arrow2{
-  width: 30px;
   transform:rotate(-65deg);
   position: absolute;
-  top: 45%; left: 50%;
+  top: 50%; left: 27%;
 }
 
 .webCloneImg3>img{
@@ -251,11 +243,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 16%;
-  }
-
-  .webClone_arrow2{
-    left: 60%;
+    left: 34%;
   }
 
   .webCloneImg3>img{
@@ -316,11 +304,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 14%;
-  }
-
-  .webClone_arrow2{
-    left: 56%;
+    left: 32%;
   }
 
   .webCloneImg3>img{
@@ -333,7 +317,13 @@ export default {
 @media screen and (max-width : 376px) {
 
   .webCloneTxt3{
-    padding: 21px;
+    font-size: 46px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .webClone_bot_wrap3{
+    padding-top: 20%;
   }
 
   .webClone_txt_wrap3>p{
@@ -370,11 +360,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 21%;
-  }
-
-  .webClone_arrow2{
-    left: 67%;
+    left: 38%;
   }
 
   .webCloneImg3>img{

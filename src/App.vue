@@ -1,12 +1,12 @@
 <template>
-<article class="mainNav">
+<article class="mainNav scroll" id="top">
   <div>
     <a href="introPage.vue">
-      <img class="mainLogo sm_none" src="../src/assets/img/peachLogo.png">
+      <img class="mainLogo mo_none" src="../src/assets/img/peachLogo.png">
     </a>
   </div>
   <nav>
-    <ul class="main_nav">
+    <ul class="main_nav mo_none">
       <li v-on:click="gotointro">Intro</li>
       <li v-on:click="gotoabout">About</li>
       <li v-on:click="gotoproject">Project</li>
@@ -14,19 +14,27 @@
       <li v-on:click="gotocontact">Contact</li>
     </ul>
   </nav>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a v-on:click="gotointro">Intro</a>
+    <a v-on:click="gotoabout">About</a>
+    <a v-on:click="gotoproject">Project</a>
+    <a v-on:click="gotoWebclone">Web Clone</a>
+    <a v-on:click="gotocontact">Contact</a>
+</div>
+<span class="web_none" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
 </article>
 <introPage id="intro"></introPage>
 <about id="about"></about>
-<project id="project"></project>
+<project></project>
 <proTwo id="proTwo"></proTwo>
 <webclone id="webclone"></webclone>
 <webTwo id="webTwo"></webTwo>
 <webThird id="webThird"></webThird>
 <contactMe id="contact"></contactMe>
 <p class="fotCopy">Copyright 2022. Web Publisher portfolio -- by Seong Boyeon</p>
-<div class="moveTopBtn" id="container">
-  <span>TOP</span>
-</div>
+<div class="moveTopBtn" id="container" @click="gototop"></div>
+
 </template>
 
 <script>
@@ -38,13 +46,11 @@ import webclone from './components/webClone.vue'
 import webTwo from './components/webCloneTwo.vue'
 import webThird from './components/webCloneThr.vue'
 import contactMe from './components/contactMe.vue'
-import test from '../public/js/test.js'
+
 
 export default {
   name: 'App',
-  setup() {
-    test.method('hello!')
-  },
+
   methods: {
      gotointro() {
       const intro = document.getElementById('intro')
@@ -93,6 +99,12 @@ export default {
       if(contact) {
         contact.scrollIntoView({behavior : 'smooth'})
       }
+    },
+    gototop() {
+      const contact = document.getElementById('top')
+      if(contact) {
+        contact.scrollIntoView({behavior : 'smooth'})
+      }
     }
 
   },
@@ -114,6 +126,10 @@ export default {
 </script>
 
 <style scoped>
+
+  *{
+    transition: all 0.5s ease;
+  }
 
   .mainNav{
     display: flex;
@@ -150,6 +166,36 @@ export default {
     text-decoration-color: rgba(94, 154, 205, 60%);
   }
 
+  .sidenav {
+    width: 0; height: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0; right: 0;
+    background-color: #CFB6A4;
+    overflow-x: hidden;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    display: block;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 24px;
+    color: #FFFAF6;
+    font-family: Dutch801 Rm BT;
+  }
+
+  .sidenav a:hover {
+    color: #EB2039;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0; right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+
   .fotCopy{
     font-family: Noto Sans KR;
     font-size: 16px;
@@ -163,11 +209,10 @@ export default {
 
   .moveTopBtn{
     position: fixed;
-    width: 80px; height: 80px;
+    width: 60px; height: 60px;
     border-radius: 50%;
     right: 50px; bottom: 94px;
     box-shadow: 3px 3px 18px 15px rgb(0 0 0 / 5%);
-    background-color: #ffffff;
     transition: all 0.3s ease-out;
     text-decoration: none;
     text-align: center;
@@ -175,53 +220,33 @@ export default {
     -webkit-font-smoothing: antialiased;
     z-index: 99;
     cursor: pointer;
-}
-
-.moveTopBtn::before{
-    content: '';
-    background: url(../src/assets/img/icon_topbtn.png) center center no-repeat;
+    background: url(../src/assets/img/btn_scrollTop.png) center center no-repeat;
     background-size: 100%;
-    display: block;
-    width: 21px;
-    height: 11px;
-    margin: 17px auto 7px;
-}
+    image-rendering: -webkit-optimize-contrast;
+  }
 
-.moveTopBtn>span{
-    display: block;
-    font-family: "sub_type";
-    font-size: 18px;
-    font-weight: bold;
-    color: #F26A25;
-    letter-spacing: 1px;
-}
+  #container{
+    transition-duration: 1s;
+    opacity: 0;
+  }
 
-#container{
-  transition-duration: 1s;
-  opacity: 0;
-}
-
-.web_none{
-  display: none;
-}
-
+  .web_none{
+    display: none;
+  }
 
 
  @media screen and (max-width : 1280px) {
 
   .mainNav {
     width: 100%;
-    transition: all 0.5s ease;
   }
 
   .mainNav>div {
-    width: 80px;
-    transition: all 0.5s ease;
+    width: 0px;
   }
 
   .mainLogo {
     width: 100%;
-    transition: all 0.5s ease;
   }
 
   .main_nav>li {
@@ -234,12 +259,11 @@ export default {
 
 @media screen and (max-width : 1024px) {
 
-    .main_nav>li {
-      font-size: 20px;
-      padding: 5px 20px;
-      box-sizing: border-box;
-
-    }
+  .main_nav>li {
+    font-size: 20px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+  }
 
 }
 
@@ -260,29 +284,33 @@ export default {
   .web_none{
     display: block;
   }
-  
+
+  .mo_none{
+    display: none;
+  }
+
   .main_nav>li {
     font-size: 16px;
     padding: 10px;
   }
 
   .moveTopBtn{
-        width: 56px; height: 56px;
-        padding: 16px 0;
-        box-sizing: border-box;
-        right: 30px; bottom: 30px;
-        box-shadow: 2px 2px 12px 7px rgb(0 0 0 / 5%);
-    }
+    width: 50px; height: 50px;
+    padding: 16px 0;
+    box-sizing: border-box;
+    right: 30px; bottom: 30px;
+    box-shadow: 2px 2px 12px 7px rgb(0 0 0 / 5%);
+  }
 
-    .moveTopBtn::before{
-        width: 12px; height: 7px;
-        margin: 0 auto 7px;
-    }
-    
-    .moveTopBtn>span{
-        font-size: 13px;
-        letter-spacing: 0.2px;
-    }
+  .moveTopBtn::before{
+    width: 12px; height: 7px;
+    margin: 0 auto 7px;
+  }
+  
+  .moveTopBtn>span{
+    font-size: 13px;
+    letter-spacing: 0.2px;
+  }
 
 }
 
@@ -303,11 +331,19 @@ export default {
     padding: 3px;
   }
 
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+
   .moveTopBtn{
-    width: 56px; height: 56px;
+    width: 45px; height: 45px;
     padding: 16px 0;
     box-sizing: border-box;
-    right: 30px; bottom: 30px;
+    right: 30px; bottom: 85px;
     box-shadow: 2px 2px 12px 7px rgb(0 0 0 / 5%);
   }
 
@@ -326,9 +362,6 @@ export default {
 
 @media screen and (max-width : 376px) {
 
-  .sm_none{
-    display: none;
-  }
 
   nav{
     width: 100%;

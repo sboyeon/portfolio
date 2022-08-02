@@ -1,5 +1,5 @@
 <template>
-  <div class="webClone_wrap1">
+  <div class="webClone_wrap1 scroll">
     <h1 class="webCloneTxt">Web clone</h1>
     <div class="webClone_bot_wrap">
       <div class="webClone_txt_wrap">
@@ -132,7 +132,7 @@ export default {
   width: 30px;
   transform:rotate(-65deg);
   position: absolute;
-  top: 45%; left: 48%;
+  top: 50%; left: 27%;
 }
 
 .webCloneImg>img{
@@ -245,7 +245,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 60%;
+    left: 34%;
   }
 
   .webCloneImg>img{
@@ -306,7 +306,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 56%;
+    left: 32%;
   }
 
   .webCloneImg>img{
@@ -319,7 +319,13 @@ export default {
 @media screen and (max-width : 376px) {
 
   .webCloneTxt{
-    padding: 21px;
+    font-size: 46px;
+    padding: 30px;
+    box-sizing: border-box;
+  }
+
+  .webClone_bot_wrap{
+    padding-top: 20%;
   }
 
   .webClone_txt_wrap>p{
@@ -356,7 +362,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 67%;
+    left: 38%;
   }
 
   .webCloneImg>img{
