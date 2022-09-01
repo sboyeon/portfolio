@@ -9,8 +9,6 @@
           <span>#css</span>
           <span>#js</span>
           <span>#jQery</span>
-          <span>#MySQL</span>
-          <span>#Node.js</span>
         </div>
         <div class="webClone_date">
           <span>제작기간: 04/26 - 5/16</span>

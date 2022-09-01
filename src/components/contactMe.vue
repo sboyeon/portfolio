@@ -35,7 +35,7 @@ export default {
 
 .contact_wrap{
   background-color: rgba(255, 230, 207, 30%);
-  /* height: 100vh; */
+  height: 70vh;
 }
 
 .contactTxt{
@@ -194,10 +194,6 @@ export default {
     font-size: 15px;
  }
 
- .contact_bot_l>ul{
-    line-height: 1.4;
- }
-
   .contact_bot_l>ul>li>img{
     width: 19px; height: 19px;
   }
@@ -223,8 +219,12 @@ export default {
     display: block;
   }
 
+  .contact_bottom_txt{
+    margin: 20px;
+  }
+
   .contact_bot_l>ul{
-    margin: 10px;
+    margin: 20px;
  }
 
 }
@@ -232,16 +232,16 @@ export default {
 @media screen and (max-width : 480px) {
 
   .contact_bottom_wrap{
-    margin: 0px 30px;
+    margin: 10px 30px;
   }
 
   .contact_bottom_txt{
     font-size: 13px;
-    margin: 0px;
+    margin: 6px;
   }
 
   .contact_bot_l>ul{
-    margin: 5px 0px;
+    margin: 10px;
   }
 
   .contact_bot_l>ul>li{
@@ -262,19 +262,28 @@ export default {
 @media screen and (max-width : 376px) {
 
   .contact_bottom_wrap{
-    margin: 0px 15px;
+    margin: 5px 15px;
+    padding: 0px 30px;
   }
 
   .contact_bottom_txt{
-    font-size: 11px;
+    font-size: 12px;
+    margin: 2px;
+    line-height: 2;
   }
 
   .contact_bottom_txt span{
     font-size: 11px;
   }
 
+  .contact_bot_l>ul{
+    margin: 3px;
+    padding-top: 30px;
+    line-height: 2;
+  }
+
   .contact_bot_l>ul>li{
-    font-size: 11px;
+    font-size: 12px;
   }
 
   .contact_bot_l>ul>li>img{

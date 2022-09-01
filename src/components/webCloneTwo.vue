@@ -9,8 +9,6 @@
           <span>#css</span>
           <span>#js</span>
           <span>#jQery</span>
-          <span>#MySQL</span>
-          <span>#Node.js</span>
         </div>
         <div class="webClone_date2">
           <span>제작기간: 04/26 - 5/16</span>
@@ -138,7 +136,7 @@ export default {
   width: 30px;
   transform:rotate(-65deg);
   position: absolute;
-  top: 50%; left: 27%;
+  top: 50%; left: 35%;
 }
 
 .webCloneImg2>img{
@@ -365,7 +363,7 @@ export default {
   }
 
   .webClone_arrow1{
-    left: 38%;
+    left: 48%;
   }
 
   .webCloneImg2>img{

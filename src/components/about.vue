@@ -3,7 +3,7 @@
     <h1 class="aboutTxt">About</h1>
     <div class="about_bottom_wrap">
       <div class="about_left_wrap">
-        <swiper class="about_left"
+        <swiper :pagination="pagination" :modules="modules" class="mySwiper about_left"
           :slides-per-view="1"
           :space-between="20"
           @swiper="onSwiper"
@@ -25,7 +25,7 @@
             <li class="about_li"><a>Figma</a></li>
           </swiper-slide>
         </swiper>
-      </div>
+      </div> 
       <div class="about_center_wrap">
         <div>
           <ul class="about_center_t">
@@ -54,7 +54,11 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 
 // Import Swiper styles
 import 'swiper/css';
+import "swiper/css/pagination";
 
+// swiper 커스터마이즈 css 불러오기
+import "../../public/css/swiper.css";
+import { Pagination } from "swiper";
 
 
 export default {
@@ -63,18 +67,22 @@ export default {
       Swiper,
       SwiperSlide,
     },
-    setup() {
-      const onSwiper = (swiper) => {
-        console.log(swiper);
-      };
-      const onSlideChange = () => {
-        console.log('slide change');
-      };
-      return {
-        onSwiper,
-        onSlideChange,
-      };
-    },
+  setup() {
+    const onSwiper = (swiper) => {
+      console.log(swiper);
+    };
+    const onSlideChange = () => {
+      console.log('slide change');
+    };
+    return {
+      onSwiper,
+      onSlideChange,
+      pagination: {
+        clickable: true,
+        },
+      modules: [Pagination],
+    };
+  },
   
 }
 </script>
@@ -106,7 +114,7 @@ export default {
 
 .about_bottom_wrap{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   padding: 50px;
   box-sizing: border-box;
   margin: 50px auto;
@@ -116,11 +124,11 @@ export default {
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  max-width: 240px;
+  max-width: 300px;
 }
 
 .about_left .about_ul {
-  width: 240px;
+  width: 300px;
   display: flex;
   flex-wrap: wrap;
 }
@@ -135,6 +143,7 @@ export default {
   overflow: hidden;
   text-align: center;
   line-height: 120px;
+  margin: 8px;
 }
 
 .about_left .about_li:nth-child(1)::after,
@@ -164,19 +173,19 @@ export default {
 }
 
 .about_left .about_ul:nth-child(1) .about_li:nth-child(3):hover::after{
-  height: 65%;
+  height: 55%;
 }
 
 .about_left .about_ul:nth-child(1) .about_li:nth-child(4):hover::after{
-  height: 65%;
+  height: 55%;
 }
 
 .about_left .about_ul:nth-child(1) .about_li:nth-child(5):hover::after{
-  height: 75%;
+  height: 60%;
 }
 
 .about_left .about_ul:nth-child(1) .about_li:nth-child(6):hover::after{
-  height: 50%;
+  height: 40%;
 }
 
 
@@ -203,7 +212,7 @@ export default {
 }
 
 .about_left .about_ul:nth-child(2) .about_li:nth-child(6):hover::after{
-  height: 90%;
+  height: 80%;
 }
 
 .about_left .about_li>a{
@@ -230,6 +239,10 @@ export default {
   list-style: none;
   color: #424242;
   font-family: Dutch801 Rm BT;
+}
+
+.about_center_t>li{
+  margin-bottom: 10px;
 }
 
 .about_center_t span{
@@ -266,9 +279,6 @@ export default {
   position: absolute;
   transition: 1s;
 }
-
-
-
 
 
 

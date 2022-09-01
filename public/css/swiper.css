@@ -1,0 +1,70 @@
+/* pagination 위치 이동을 위해 overflow를 visible 시킴 */
+.swiper {
+  overflow: visible;
+}
+/* 부모 자식 간 position되어 있으므로 bottom만 이동하여 조정 */
+.swiper-pagination {
+  bottom: -30px !important;
+  left: -5% !important;
+}
+/* 활성화 된 swiper만 표시 */
+.swiper-slide-active {
+  opacity: 1;
+}
+/* 이전 swiper와 다음 swiper 가리기 */
+.swiper-slide-prev {
+  opacity: 0;
+}
+.swiper-slide-next {
+  opacity: 0;
+}
+
+/* 기본 pagination 불릿 커스터마이징 */
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  text-align: center;
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.2);
+}
+/* 활성화 된 pagination 불릿 커스터마이징 */
+.swiper-pagination-bullet-active {
+  background: #CFB6A4;
+}
+
+@media screen and (max-width : 1280px) {
+  .swiper-pagination {
+    left: -6% !important;
+  }
+
+}
+
+
+
+@media screen and (max-width : 1024px) {
+
+  .swiper-pagination {
+    left: -7% !important;
+  }
+
+}
+
+
+@media screen and (max-width : 948px) {
+
+  .swiper-pagination {
+    left: -10% !important;
+  }
+
+}
+
+
+
+
+@media screen and (max-width : 780px) {
+
+  .swiper-pagination {
+    left: -14% !important;
+  }
+
+}

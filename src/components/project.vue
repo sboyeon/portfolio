@@ -11,7 +11,7 @@
           <span>#html</span>
           <span>#css</span>
           <span>#js</span>
-          <span>#jQery</span>
+          <span>#jQuery</span>
           <span>#MySQL</span>
           <span>#Node.js</span>
         </div>
@@ -30,7 +30,10 @@
           <li>공란 존재 시 '다시 확인해주세요.' 경고문 띄움</li>
         </ul>
         <div class="project_link">
-          <p @click="modal1 = true">Mockup<img class="project_arrow1" src="../assets/img/64818.png" alt="link"></p>
+          <p @click="modal1 = true">Mockup
+            <img class="project_arrow1" src="../assets/img/64818.png" alt="link">
+            <img src="../assets/img/touslesjoursMockup.jpg" alt="mockup">
+          </p>
           <p>사이트바로가기<img class="project_arrow2" src="../assets/img/64818.png" alt="link"></p>
         </div>
       </div>
@@ -141,6 +144,12 @@ export default {
 
 .project_link>p{
   margin: 16px 30px;
+  overflow-y: scroll;
+}
+
+.project_link>p>img:nth-child(2) {
+  display: block;
+  width: 100%;
 }
 
 .project_arrow1{
@@ -161,20 +170,26 @@ export default {
   width: 576px;
 }
 
-.project_modal {
-  width: 100%; height: 100%;
-  position: absolute;
-  top: 230vh; right: 0px;
+/* .project_modal {
   background: url(../assets/img/touslesjoursMockup.jpg) no-repeat;
   background-size: 100%;
-  z-index: 99;
   image-rendering: -webkit-optimize-contrast;
-}
+  position: fixed;
+  top: 50%; right: 10%;
+  transform: translate(-10%, -50%);
+  height: 100%; 
+  width: 30%;
+  width: 20%;
+  z-index: 99;
+  overflow: scroll;
+  padding: 50px;
+  box-sizing: border-box
+} */
 
 .project_close {
-  width: 40px; height: 40px;
+  width: 20px; height: 20px;
   position: absolute;
-  top: 0px; right: 30px;
+  top: 0px; right: 3%;
   background: url(../assets/img/close.png) center center no-repeat;
   background-size: 100%;
 }

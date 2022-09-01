@@ -14,7 +14,7 @@
       <li v-on:click="gotocontact">Contact</li>
     </ul>
   </nav>
-  <div id="mySidenav" class="sidenav">
+  <div id="mySidenav" class="sidenav web_none">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <a v-on:click="gotointro">Intro</a>
     <a v-on:click="gotoabout">About</a>
@@ -34,7 +34,6 @@
 <contactMe id="contact"></contactMe>
 <p class="fotCopy">Copyright 2022. Web Publisher portfolio -- by Seong Boyeon</p>
 <div class="moveTopBtn" id="container" @click="gototop"></div>
-
 </template>
 
 <script>
@@ -133,9 +132,6 @@ export default {
 
   .mainNav{
     display: flex;
-    /* position: sticky;
-    position: -webkit-sticky;  사파리 브라우저 지원
-    top: 0; */
     justify-content: space-between;
     padding: 20px;
     box-sizing: border-box;
@@ -225,14 +221,23 @@ export default {
     image-rendering: -webkit-optimize-contrast;
   }
 
-  #container{
-    transition-duration: 1s;
-    opacity: 0;
-  }
+/* .moveTopBtn>span{
+    display: block;
+    font-family: Dutch801 Rm BT;
+    font-size: 18px;
+    font-weight: bold;
+    color: #EB2039;
+    letter-spacing: 1px;
+} */
 
-  .web_none{
-    display: none;
-  }
+#container{
+  transition-duration: 1s;
+  opacity: 0;
+}
+
+.web_none{
+  display: none;
+}
 
 
  @media screen and (max-width : 1280px) {

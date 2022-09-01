@@ -1,4 +1,7 @@
 <template>
+  <!-- <div class="project2_modal" v-if="modal2 == true">
+    <div class="project2_close" @click="modal2 = false"></div>
+  </div> -->
   <div class="project_wrap2 scroll">
     <h1 class="projectTxt2">Project</h1>
     <div class="project_bot_wrap2">
@@ -35,6 +38,7 @@
         </ul>
         <div class="project_link2">
             <p>Mockup<img class="project_arrow1" src="../assets/img/64818.png" alt="link"></p>
+            <!-- <p @click="modal2 = true">Mockup<img class="project_arrow1" src="../assets/img/64818.png" alt="link"></p> -->
             <p>사이트바로가기<img class="project_arrow2" src="../assets/img/64818.png" alt="link"></p>
         </div>
       </div>
@@ -48,6 +52,11 @@
 <script>
 export default {
   name: 'projectTwo_page',
+   data() {
+    return {
+      modal2: false
+  }
+} 
   
 }
 </script>
@@ -160,6 +169,26 @@ export default {
   margin: 100px auto;
   /* box-shadow: 10px 10px 3px rgb(0 0 0 / 20%); */
 }
+
+
+.project2_modal {
+  width: 30%; height: 800vh;
+  position: absolute;
+  top: 330vh; right: 5%;
+  background: url(../assets/img/touslesjoursMockup.jpg) no-repeat;
+  background-size: 100%;
+  z-index: 9;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+.project2_close {
+  width: 40px; height: 40px;
+  position: absolute;
+  top: 0px; right: 30px;
+  background: url(../assets/img/close.png) center center no-repeat;
+  background-size: 100%;
+}
+
 
 
 

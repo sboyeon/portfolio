@@ -1,5 +1,5 @@
 <template>
-  <div class="introPage_wrap sroll">
+  <div class="introPage_wrap">
     <div class="intro">
       <h1 class="introMainTxt">Portfolio</h1>
       <div class="introImgs">
@@ -40,7 +40,7 @@ export default {
 .introPage_wrap{
   height: 100vh;
   background-color: rgba(255, 230, 207, 30%);
-  padding: 50px 20px;
+  padding: 0px 20px;
 }
 
 .intro{
@@ -133,7 +133,7 @@ export default {
 }
 
 
-@media screen and (max-width : 948px) {
+@media screen and (max-width : 1024px) {
 
   .introImgs>img:nth-child(2) {
     width: 370px;

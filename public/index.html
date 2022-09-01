@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../public/css/reset.css">
     <title>보연 포트폴리오</title>
   </head>
-  <body>
+  <body style="margin: 0;">
     <div id="app">
 
     </div>
@@ -22,7 +22,7 @@
 
     function scrollE() {
       var cont = document.querySelector('#container');
-      var cli = 500 + window.scrollY;
+      var cli = 300 + window.scrollY;
       if (cli < window.innerHeight) {
         cont.style.opacity = 0;
       } else {
@@ -85,18 +85,17 @@
     });
   }
   </script>
-
   <script>
     function openNav() {
       document.getElementById("mySidenav").style.width = "250px";
-      document.getElementById("mySidenav").style.height = "800px";
+      document.getElementById("mySidenav").style.height= "800px";
       document.getElementById("mySidenav").style.zIndex = "9";
     }
     
     function closeNav() {
       document.getElementById("mySidenav").style.width = "0";
     }
+  </script>
 
-</script>
 
-</html>
+  </html>
